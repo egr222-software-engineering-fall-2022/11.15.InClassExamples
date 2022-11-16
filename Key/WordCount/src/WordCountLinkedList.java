@@ -5,6 +5,7 @@ import java.util.*;
 public class WordCountLinkedList {
     public static void main(String[] args) throws FileNotFoundException {
         // read file into a map of [word --> number of occurrences]
+//        List<String> words = new ArrayList<>();
         List<String> words = new LinkedList<>();
 
         System.out.println("Reading the file...");
@@ -12,19 +13,19 @@ public class WordCountLinkedList {
         readfile(input, words);
 
         System.out.println("Removing the words...");
-        everyOther(words);  // remove every other word
-//        while (!words.isEmpty()) {
-//            words.remove(0);
-//        }
+//        everyOther(words);  // remove every other word
+        while (!words.isEmpty()) {
+            words.remove(0);
+        }
 
         System.out.println("Done.");
 
-        System.out.println();
-
-        input = new Scanner(new File("small.txt"));
-        words.clear();
-        readfile(input, words);
-        printFile(words);
+//        System.out.println();
+//
+//        input = new Scanner(new File("small.txt"));
+//        words.clear();
+//        readfile(input, words);
+//        printFile(words);
     }
 
     public static void printFile(List<String > words) {

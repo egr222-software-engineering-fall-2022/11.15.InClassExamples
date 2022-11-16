@@ -13,6 +13,9 @@ public class IntegerSet {
         System.out.println(grades.size() + " unique scores.");
         for (double grade : grades) {
             System.out.println("Student's grade: " + grade);
+//            if (grade < 75) {
+//                grades.remove(grade);
+//            }
         }
         System.out.println(grades);
     }
